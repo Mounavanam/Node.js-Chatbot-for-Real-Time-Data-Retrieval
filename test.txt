@@ -1,0 +1,28 @@
+async function askQuestion(question) {
+    try {
+        // Use the API to create a completion using an appropriate model
+        const response = await openai.chat.completions.create({
+            model: "gpt-3.5-turbo", // Ensure this model is correct as per your access and needs
+            messages: [
+                { role: "user", content: question }
+
+            ],
+        });
+
+        // Log the result to the console
+        console.log(response.choices);
+
+        if (response.choices && response.choices.length > 0) {
+            response.choices.forEach((choice, index) => {
+                console.log(`Response ${index + 1}: ${choice.message.content}`);
+            });
+        } else {
+            console.log("No completions found.");
+        }
+    } catch (error) {
+        // Handle any errors that occur during the API call
+        console.error('Error during API call:', error);
+    }
+}
+
+
