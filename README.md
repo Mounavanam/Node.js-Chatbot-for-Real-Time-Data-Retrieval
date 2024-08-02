@@ -16,9 +16,9 @@ Developed an interactive chatbot using Node.js that integrates with OpenAI's GPT
 
 ### Usage
 - Install dependencies
-     .npm install
--Run the bot
-     .npm start
+     #### npm install
+- Run the bot
+    #### npm start
 ### How can it be extended further?
 - Context-Aware Conversations: Enhance the chatbot's ability to maintain context over multiple interactions. This can be achieved by integrating more sophisticated NLP libraries.
 - Database Integration: Use a database to store user preferences or history to personalize the conversation.
